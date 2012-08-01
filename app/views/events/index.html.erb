@@ -1,0 +1,6 @@
+<h1>All Events</h1>
+<div class="events">
+	<% @events.each do |event| %>
+        <%= radio_button(event,"event", event.event) %> <%=event.event %><br />
+    <% end %>
+</div>
