@@ -36,3 +36,11 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :development do
+  gem 'rspec-rails'
+end
+group :test do
+  gem 'rspec'
+  gem 'webrat'
+end
