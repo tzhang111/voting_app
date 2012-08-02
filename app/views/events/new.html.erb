@@ -1,10 +1,24 @@
+<script language="javascript">
+  fields=0;
+  function addOption() {
+      fields++;
+      document.getElementById("text").innerHTML += document.getElementById("text").innerHTML += "<input id='vote_option' name='vote[option]' size='30' type='text' /><br/>"
+              //"<%= text_field :vote, :option %><br/>"
+              //"option" + fields + ": <input field='text' value='' /><br/>"
+  }
+</script>
 <h1>New Event</h1>
 <%= form_for(@event) do |f| %>
 	<div class="field">
 		<%=f.label :event %><br/>
 		<%=f.text_field :event %>
 	</div>
-	
+
+    <div>
+      <input type="button" onclick="addOption()" name="add" value="Add new option" />
+    </div>
+
+    <div id="text" />
 	<div class="action">
 		<%=f.submit "create event" %>
 	</div>
