@@ -1,6 +1,6 @@
 <h1>All Events</h1>
-<div class="events">
+<form class="events">
 	<% @events.each do |event| %>
-        <%= radio_button(event,"event", event.event) %> <%=event.event %><br />
+        <input type="radio" name="event" value=<%=event.id%>><%=event.event%><br />
     <% end %>
-</div>
+</form>
