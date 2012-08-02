@@ -2,8 +2,7 @@
   fields=0;
   function addOption() {
       fields++;
-      document.getElementById("text").innerHTML += document.getElementById("text").innerHTML += "<input id='vote_option' name='vote[option]' size='30' type='text' /><br/>"
-              //"<%= text_field :vote, :option %><br/>"
+      document.getElementById("text").innerHTML = document.getElementById("text").innerHTML += "option" + fields + ": <input id='vote_option' name='vote[option]' size='30' type='text' /><br/>"
               //"option" + fields + ": <input field='text' value='' /><br/>"
   }
 </script>
@@ -18,8 +17,10 @@
       <input type="button" onclick="addOption()" name="add" value="Add new option" />
     </div>
 
-    <div id="text" />
+
 	<div class="action">
 		<%=f.submit "create event" %>
 	</div>
+    <div id="text" />
 <% end %>
+<%= debug(params) if Rails.env.development? %>
