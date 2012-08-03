@@ -1,14 +1,20 @@
 <script language="javascript">
+  var seperator='####'
   fields=0;
   function addOption() {
       fields++;
-      document.getElementById("text").innerHTML = document.getElementById("text").innerHTML += "option" + fields + ": <input id='option'+fields name='vote[option'+fields+']' size='30' type='text' /><br/>"
+      //document.getElementById("text").innerHTML = document.getElementById("text").innerHTML += "option" + fields + ": <input id='option'+fields name='vote[option'+fields+']' size='30' type='text' /><br/>"
+      document.getElementById("text").innerHTML = document.getElementById("text").innerHTML += "option" + fields + ": <input id=option" + fields + " name=vote[option" + fields + "] size=30 type=text /><br/>"
               //"option" + fields + ": <input field='text' value='' /><br/>"
   }
   function concatenate() {
-  	for(i=1; i<=fields; i++) { 
-  		$('#options').val($('#option' + i).val() + ';'); 
+        var temp='';
+  	for(i=1; i<fields; i++) { 
+  	        temp += $('#option'+i).val() + seperator;
+  		//($('#option1').val() + ';'); 
   	}
+  	temp += $('#option'+fields).val()
+  	$('#options').val(temp)
   }
 </script>
 <h1>New Event</h1>
@@ -27,7 +33,7 @@
 		<input name="commit" type="submit" value="create event" onClick="concatenate()"/>
 	</div>
 	
-	<input type="text" id="options" name="vote[options]" />
+	<input type="text" id="options" name="vote[options]" value='' />
     <div id="text" />
 <% end %>
 <%= debug(params) if Rails.env.development? %>

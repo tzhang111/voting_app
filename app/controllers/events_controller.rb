@@ -11,14 +11,18 @@ class EventsController < ApplicationController
   	end
   	
   	def create
-  		puts params
   		@event = Event.new(params[:event])
-      @vote = @event.votes.build(params[:vote])
-  		if @event.save
-  		    # flash message here
-  		else
-  		   @title = "New Event"
-  		   render new
+  		@event.save
+  		params[:vote][:options].split("####").each do |o|
+  		@vote = @event.votes.build(:option => o)
+  		@vote.save
   		end
+      
+  		#if @event.save
+  		    # flash message here
+  		#else
+  		#   @title = "New Event"
+  		#   render new
+  		#end
   	end
 end
