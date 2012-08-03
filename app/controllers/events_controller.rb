@@ -11,6 +11,7 @@ class EventsController < ApplicationController
   	end
   	
   	def create
+  		puts params
   		@event = Event.new(params[:event])
       @vote = @event.votes.build(params[:vote])
   		if @event.save
