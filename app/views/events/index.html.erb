@@ -1,6 +1,8 @@
 <h1>All Events</h1>
-<form class="events">
 	<% @events.each do |event| %>
-        <input type="radio" name="event" value=<%=event.id%>><%=event.event%><br />
+	    <%= form_for event do |e| %>
+			<%=event.event+": " %>
+			<%=e.select :choose, Event::CHOOSE.map { |c| [c, Event::CHOOSE.index(c)] },  :selected  => event.choose, :include_blank => true %>
+        <!-- <input type="radio" name="event" value=<%=event.id%>><%=event.event%><br /> -->
+		<% end %>
     <% end %>
-</form>
