@@ -25,4 +25,10 @@ class EventsController < ApplicationController
   		#   render new
   		#end
   	end
+	
+	def choose
+		@events = Event.all
+		Event.update_all "choose=1", :id => params[:event_ids]
+		Event.update_all "choose=0", ["id not in (?)", params[:event_ids]]
+	end
 end

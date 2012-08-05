@@ -1,8 +1,13 @@
 <h1>All Events</h1>
-	<% @events.each do |event| %>
-	    <%= form_for event do |e| %>
-			<%=event.event+": " %>
-			<%=e.select :choose, Event::CHOOSE.map { |c| [c, Event::CHOOSE.index(c)] },  :selected  => event.choose, :include_blank => true %>
-        <!-- <input type="radio" name="event" value=<%=event.id%>><%=event.event%><br /> -->
-		<% end %>
-    <% end %>
+<%= Event.all %>
+	<% form_tag '/events/choose', :methods => :put do %>
+		<ul>
+			<% for event in @events %>
+				<li>
+					<%= check_box_tag "event_ids[]", event.id %>
+					<%= event.event %>
+				</li>
+			<% end %>
+		</ul>
+		<%= submit_tag "Update with choose" %>
+	<% end %>

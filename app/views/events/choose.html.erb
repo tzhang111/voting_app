@@ -1,0 +1,13 @@
+<h1>All Events</h1>
+<% form_tag choose_events_path, :method => :put do %>
+<%= @events %>
+  <ul>
+  <% for event in @events %>
+    <li>
+      <%= check_box_tag "event_ids[]", event.id %>
+      <%= event.event %>
+    </li>
+  <% end %>
+  </ul>
+  <%= submit_tag "Mark as Complete" %>
+<% end %>
