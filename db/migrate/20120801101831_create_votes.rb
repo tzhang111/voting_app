@@ -3,7 +3,7 @@ class CreateVotes < ActiveRecord::Migration
     create_table :votes do |t|
       t.string :option
       t.integer :event_id
-      t.integer :number
+      t.integer :number, :default => 0
 
       t.timestamps
     end

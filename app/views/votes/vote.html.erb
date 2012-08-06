@@ -1,1 +1,12 @@
-<h1><%= @event %></h1>
+<h1><%= @event.event %></h1>
+<%= form_tag '/votes/update', :method => :put do %>
+		<ul>
+			<% for vote in @options %>
+				<li>
+					<%= check_box_tag "vote_id", vote.id %>
+					<%= vote.option %>
+				</li>
+			<% end %>
+		</ul>
+		<%= submit_tag "Submit vote!" %>
+	<% end %>
