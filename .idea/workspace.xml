@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1acc092b-38ff-4dd9-8fd4-e0836ce451db" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120801101831_create_votes.rb" afterPath="$PROJECT_DIR$/db/migrate/20120801101831_create_votes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/votes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/votes_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/to_be_voted.html.erb" afterPath="$PROJECT_DIR$/app/views/events/to_be_voted.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/votes/update.html.erb" afterPath="$PROJECT_DIR$/app/views/votes/update.html.erb" />
     </list>
     <ignored path="voting_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="35" selection-start="838" selection-end="838" vertical-scroll-proportion="0.099403575">
+            <state line="16" column="35" selection-start="838" selection-end="838" vertical-scroll-proportion="-1.4705882">
               <folding />
             </state>
           </provider>
@@ -63,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="votes_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="votes_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/votes_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
+            <state line="8" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.43636364">
               <folding />
             </state>
           </provider>
@@ -75,7 +77,7 @@
       <file leaf-file-name="update.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/votes/update.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="55" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+            <state line="8" column="22" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,25 +86,25 @@
       <file leaf-file-name="vote.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/votes/vote.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="3" column="8" selection-start="90" selection-end="90" vertical-scroll-proportion="-2.6470587">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="event.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/event.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+            <state line="4" column="20" selection-start="125" selection-end="125" vertical-scroll-proportion="-3.5294118">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vote.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/vote.rb">
+      <file leaf-file-name="to_be_voted.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/events/to_be_voted.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="19" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+            <state line="7" column="4" selection-start="107" selection-end="107" vertical-scroll-proportion="-6.1764708">
               <folding />
             </state>
           </provider>
@@ -139,6 +141,9 @@
         <option value="$PROJECT_DIR$/app/views/events/new.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20120801101831_create_votes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20120806141251_change_default_vote_number.rb" />
+        <option value="$PROJECT_DIR$/app/views/events/to_be_voted.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/votes/update.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/votes_controller.rb" />
       </list>
     </option>
   </component>
@@ -258,6 +263,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="voting_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="voting_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -548,13 +575,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/events/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="47" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
@@ -579,9 +599,9 @@
         <state line="1" column="19" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120801101831_create_votes.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120806141251_change_default_vote_number.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="23" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+        <state line="2" column="44" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -593,37 +613,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/votes/vote.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120801101831_create_votes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/votes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/votes/update.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="55" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120806141251_change_default_vote_number.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="44" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
+        <state line="5" column="23" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/events/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="35" selection-start="838" selection-end="838" vertical-scroll-proportion="0.099403575">
+        <state line="16" column="35" selection-start="838" selection-end="838" vertical-scroll-proportion="-1.4705882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/events/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="20" selection-start="125" selection-end="125" vertical-scroll-proportion="-3.5294118">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/events/to_be_voted.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="107" selection-end="107" vertical-scroll-proportion="-6.1764708">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/votes/update.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="22" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/votes/vote.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="8" selection-start="90" selection-end="90" vertical-scroll-proportion="-2.6470587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/votes_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.43636364">
           <folding />
         </state>
       </provider>

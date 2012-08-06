@@ -7,6 +7,8 @@ class VotesController < ApplicationController
 	
 	def update
 		Vote.update_all "number=number+1", :id => params[:vote_id]
+    @event = Event.find(Vote.find(params[:vote_id]).event_id)
+    @options = Vote.where(["event_id=(?)", @event.id]).all
 		render 'votes/update'			
 	end
 end

@@ -1,1 +1,13 @@
-hello
+<%=@event.event %>
+<table>
+  <% @options.each do |vote| %>
+    <tr>
+      <td>
+        <%= vote.option %>
+      </td>
+      <td>
+        <%= vote.number %>
+      </td>
+    </tr>
+  <% end %>
+</table>
