@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805095303) do
+ActiveRecord::Schema.define(:version => 20120806141251) do
 
   create_table "events", :force => true do |t|
     t.string   "event"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(:version => 20120805095303) do
   create_table "votes", :force => true do |t|
     t.string   "option"
     t.integer  "event_id"
-    t.integer  "number"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "number",     :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
 end
