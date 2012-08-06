@@ -35,4 +35,9 @@ class EventsController < ApplicationController
 			Event.update_all "choose=0"
 		end
 	end
+	
+	def to_be_voted
+	     @events = Event.where(["choose = ?", 1]).all
+	     render 'votes/index'
+	end
 end

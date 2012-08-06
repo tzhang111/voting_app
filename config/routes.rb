@@ -4,6 +4,8 @@ VotingApp::Application.routes.draw do
    put 'choose'
   end
   end
+  
+  match 'votes' => 'events#to_be_voted'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,12 @@
+<table>
+<tr>
+<th>Event</th>
+<th></th>
+</tr>
+<% @events.each do |event| %>
+<tr>
+<td><%= event.event %></td>
+<td><%= link_to 'vote!', user %></td>
+</tr>
+<% end %>
+</table>
