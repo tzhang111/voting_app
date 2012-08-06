@@ -1,7 +1,7 @@
 VotingApp::Application.routes.draw do
   resources :events do
   collection do
-   get 'choose'
+   put 'choose'
   end
   end
   # The priority is based upon order of creation:
