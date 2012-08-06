@@ -6,6 +6,7 @@ VotingApp::Application.routes.draw do
   end
   
   match 'votes' => 'events#to_be_voted'
+  match 'votes/vote' => 'votes#vote'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

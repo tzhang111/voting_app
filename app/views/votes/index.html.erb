@@ -6,7 +6,10 @@
 <% @events.each do |event| %>
 <tr>
 <td><%= event.event %></td>
-<td><%= link_to 'vote!', user %></td>
+<td><%= link_to 'vote!',
+      :controller => 'votes',
+      :action => 'vote', 
+      :event_id => event.id %></td>
 </tr>
 <% end %>
 </table>
