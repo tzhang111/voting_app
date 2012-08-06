@@ -28,7 +28,11 @@ class EventsController < ApplicationController
 	
 	def choose
 		@events = Event.all
-		Event.update_all "choose=1", :id => params[:event_ids]
-		Event.update_all "choose=0", ["id not in (?)", params[:event_ids]]
+		if params[:event_ids] != nil
+			Event.update_all "choose=1", :id => params[:event_ids]
+			Event.update_all "choose=0", ["id not in (?)", params[:event_ids]]
+		else
+			Event.update_all "choose=0"
+		end
 	end
 end

@@ -1,5 +1,5 @@
 VotingApp::Application.routes.draw do
-  resources :events do
+  resources :events, :path => 'admin/events' do
   collection do
    put 'choose'
   end
