@@ -16,6 +16,7 @@ class EventsController < ApplicationController
   		params[:vote][:options].split("####").each do |o|
   		@vote = @event.votes.build(:option => o)
   		@vote.save
+  		
   		end
       
   		#if @event.save
@@ -24,6 +25,8 @@ class EventsController < ApplicationController
   		#   @title = "New Event"
   		#   render new
   		#end
+  		@events = Event.all
+  		render 'events/index'
   	end
 	
 	def choose

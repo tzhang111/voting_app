@@ -8,6 +8,8 @@ VotingApp::Application.routes.draw do
   match 'votes' => 'events#to_be_voted'
   match 'votes/vote' => 'votes#vote'
   match 'votes/update' => 'votes#update'
+  
+  get 'votes/revote_error'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
